@@ -219,10 +219,9 @@ export default function App() {
           const activeChannel = channels.find(c => c.id === active);
           if (!activeChannel) return null;
           return (
-            <PaperList
+            <PaperList 
               results={activeChannel.results}
               reloadChannel={() => reloadChannel(activeChannel.id)}
-              channelIndex={active}
               currentOptions={activeChannel.currentOptions}
             />
           );

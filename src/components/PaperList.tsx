@@ -19,15 +19,13 @@ type QueryResult = {
   options: FetchOptions;
 };
 
-export function PaperList({
-  results,
-  reloadChannel,
-  channelIndex,
-  currentOptions
-}: {
+export function PaperList({ 
+  results, 
+  reloadChannel, 
+  currentOptions 
+}: { 
   results: QueryResult[];
   reloadChannel: (options?: FetchOptions) => Promise<void>;
-  channelIndex: string;
   currentOptions: FetchOptions;
 }) {
   const [expandedAbstracts, setExpandedAbstracts] = useState<Set<string>>(new Set());

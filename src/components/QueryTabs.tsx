@@ -45,7 +45,6 @@ export function QueryTabs({
   addChannel,
   deleteChannel,
   reloadChannel,
-  reorderChannels,
   createFolder,
   deleteFolder,
   toggleFolder,
@@ -92,15 +91,6 @@ export function QueryTabs({
 
   const handleFolderDragStart = (folderId: string) => {
     setDraggedFolder(folderId);
-  };
-
-  const handleFolderDrop = (e: React.DragEvent, targetFolderId: string | null) => {
-    e.preventDefault();
-    if (draggedFolder && targetFolderId && draggedFolder !== targetFolderId) {
-      // チャンネルをフォルダから別のフォルダへ移動
-      // ここでは簡単のためスキップ（必要に応じて実装）
-    }
-    setDraggedFolder(null);
   };
 
   return (
